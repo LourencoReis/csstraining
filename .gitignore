@@ -8,6 +8,3 @@ Thumbs.db
 # Editor files
 .vscode/
 .idea/
-
-# Old assets folder (backup)
-assets/
