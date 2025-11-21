@@ -36,7 +36,24 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
+    order: 1;
 }
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    order: 3;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    order: 2;
+}
+
 .nav-brand img {
     height: 50px;
     width: auto;
@@ -64,14 +81,7 @@ body {
     color: #667eea;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
+/* Hamburger Menu Animations */
 .hamburger span {
     width: 25px;
     height: 3px;
