@@ -64,12 +64,6 @@ body {
     transform: scale(1.1) rotate(5deg);
 }
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
 .nav-menu a {
     color: #333;
     text-decoration: none;
