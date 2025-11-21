@@ -310,7 +310,7 @@ body {
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
-.interest-hobbies {
+.interest-dogs {
     background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
@@ -333,4 +333,36 @@ body {
     padding: 2rem 0;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     margin-top: 4rem;
+}
+/* Dog Photo Gallery */
+.dog-gallery-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.dog-gallery {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.dog-slide {
+    min-width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+}
+
+.dog-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }

@@ -18,4 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // Dog photo gallery auto-scroll
+    const galleries = document.querySelectorAll('.dog-gallery');
+    
+    galleries.forEach((gallery, galleryIndex) => {
+        const slides = gallery.querySelectorAll('.dog-slide');
+        let currentSlide = 0;
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            gallery.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        // Auto-scroll every 3 seconds
+        setInterval(nextSlide, 3000);
+    });
 });
