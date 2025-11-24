@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dog photo gallery auto-scroll
     const galleries = document.querySelectorAll('.dog-gallery');
     
-    galleries.forEach((gallery, galleryIndex) => {
-        const slides = gallery.querySelectorAll('.dog-slide');
+    galleries.forEach((Gallery, galleryIndex) => {
+        const slides = Gallery.querySelectorAll('.dog-slide');
         let currentSlide = 0;
         
         function nextSlide() {
