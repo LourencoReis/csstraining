@@ -6,6 +6,9 @@
     <title>Memories</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Supabase Client Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -28,42 +31,27 @@
 
     <section class="content-section">
         <h2>Our Memories Together</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item upload-item" onclick="triggerUpload(0)">
-                <p>Click to add photo</p>
-            </div>
-            <div class="gallery-item upload-item" onclick="triggerUpload(1)">
-                <p>Click to add photo</p>
-            </div>
-            <div class="gallery-item upload-item" onclick="triggerUpload(2)">
-                <p>Click to add photo</p>
-            </div>
-            <div class="gallery-item upload-item" onclick="triggerUpload(3)">
-                <p>Click to add photo</p>
-            </div>
-            <div class="gallery-item upload-item" onclick="triggerUpload(4)">
-                <p>Click to add photo</p>
-            </div>
-            <div class="gallery-item upload-item" onclick="triggerUpload(5)">
-                <p>Click to add photo</p>
-            </div>
+        
+        <!-- Loading indicator -->
+        <div id="loading" style="text-align: center; padding: 2rem;">
+            <p style="color: #667eea;">Loading photos...</p>
+        </div>
+        
+        <div class="gallery-grid" id="galleryGrid" style="display: none;">
+            <!-- Gallery items will be dynamically loaded here -->
         </div>
         
         <div style="text-align: center; margin-top: 2rem;">
             <button onclick="addNewSlot()" class="cta-button" style="display: inline-block; padding: 1rem 2rem; cursor: pointer; border: none; font-size: 1rem;">+ Add More Photos</button>
         </div>
         
-        <!-- Hidden file inputs for each gallery item -->
-        <input type="file" id="fileInput0" accept="image/*" style="display: none;" onchange="handleImageUpload(event, 0)">
-        <input type="file" id="fileInput1" accept="image/*" style="display: none;" onchange="handleImageUpload(event, 1)">
-        <input type="file" id="fileInput2" accept="image/*" style="display: none;" onchange="handleImageUpload(event, 2)">
-        <input type="file" id="fileInput3" accept="image/*" style="display: none;" onchange="handleImageUpload(event, 3)">
-        <input type="file" id="fileInput4" accept="image/*" style="display: none;" onchange="handleImageUpload(event, 4)">
-        <input type="file" id="fileInput5" accept="image/*" style="display: none;" onchange="handleImageUpload(event, 5)">
+        <!-- Hidden file input (dynamically created as needed) -->
+        <div id="fileInputsContainer"></div>
     </section>
 
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/gallery-upload.js"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/gallery-supabase.js"></script>
 </body>
 </html>
